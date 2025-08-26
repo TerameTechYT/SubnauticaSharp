@@ -1,7 +1,0 @@
-C:\Coding\SubnauticaSharp\Build\x64\Debug\SubnauticaPlus.deps.json
-C:\Coding\SubnauticaSharp\Build\x64\Debug\SubnauticaPlus.dll
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\SubnauticaPlus.csproj.AssemblyReference.cache
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\SubnauticaPlus.GeneratedMSBuildEditorConfig.editorconfig
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\SubnauticaPlus.csproj.CoreCompileInputs.cache
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\Subnauti.E3132249.Up2Date
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\SubnauticaPlus.dll

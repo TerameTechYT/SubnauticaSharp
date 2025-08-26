@@ -1,6 +1,0 @@
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\SubnauticaLibrary.csproj.AssemblyReference.cache
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\SubnauticaLibrary.GeneratedMSBuildEditorConfig.editorconfig
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\SubnauticaLibrary.csproj.CoreCompileInputs.cache
-C:\Coding\SubnauticaSharp\Build\x64\Debug\SubnauticaLibrary.deps.json
-C:\Coding\SubnauticaSharp\Build\x64\Debug\SubnauticaLibrary.dll
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\SubnauticaLibrary.dll

@@ -1,7 +1,0 @@
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\EvenMoreItems.csproj.AssemblyReference.cache
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\EvenMoreItems.GeneratedMSBuildEditorConfig.editorconfig
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\EvenMoreItems.csproj.CoreCompileInputs.cache
-C:\Coding\SubnauticaSharp\Build\x64\Debug\EvenMoreItems.deps.json
-C:\Coding\SubnauticaSharp\Build\x64\Debug\EvenMoreItems.dll
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\EvenMoreItems.dll
-C:\Coding\SubnauticaSharp\Objects\x64\Debug\EvenMore.F6273CE2.Up2Date
