@@ -26,9 +26,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{50E1B1AF-F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{A4F6432E-650D-227A-08A0-8733AEB4B29B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubnauticaPlus", "Source\EvenMoreItems\SubnauticaPlus.csproj", "{32976608-13C2-395D-F9A8-9038E6AB27B0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubnauticaLibrary", "Source\SubnauticaLibrary\SubnauticaLibrary.csproj", "{49FE6EE2-1039-874B-0D8B-185A352C2583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubnauticaPlus", "Source\SubnauticaPlus\SubnauticaPlus.csproj", "{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,18 +48,6 @@ Global
 		{A4F6432E-650D-227A-08A0-8733AEB4B29B}.Release|x64.ActiveCfg = Release|x64
 		{A4F6432E-650D-227A-08A0-8733AEB4B29B}.Release|x86.ActiveCfg = Release|x86
 		{A4F6432E-650D-227A-08A0-8733AEB4B29B}.Release|x86.Build.0 = Release|x86
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Debug|x64.ActiveCfg = Debug|x64
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Debug|x64.Build.0 = Debug|x64
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Debug|x86.ActiveCfg = Debug|x86
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Debug|x86.Build.0 = Debug|x86
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Publish|x64.ActiveCfg = Publish|x64
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Publish|x64.Build.0 = Publish|x64
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Publish|x86.ActiveCfg = Publish|x86
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Publish|x86.Build.0 = Publish|x86
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Release|x64.ActiveCfg = Release|x64
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Release|x64.Build.0 = Release|x64
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Release|x86.ActiveCfg = Release|x86
-		{32976608-13C2-395D-F9A8-9038E6AB27B0}.Release|x86.Build.0 = Release|x86
 		{49FE6EE2-1039-874B-0D8B-185A352C2583}.Debug|x64.ActiveCfg = Debug|x64
 		{49FE6EE2-1039-874B-0D8B-185A352C2583}.Debug|x64.Build.0 = Debug|x64
 		{49FE6EE2-1039-874B-0D8B-185A352C2583}.Debug|x86.ActiveCfg = Debug|x86
@@ -72,12 +60,24 @@ Global
 		{49FE6EE2-1039-874B-0D8B-185A352C2583}.Release|x64.Build.0 = Release|x64
 		{49FE6EE2-1039-874B-0D8B-185A352C2583}.Release|x86.ActiveCfg = Release|x86
 		{49FE6EE2-1039-874B-0D8B-185A352C2583}.Release|x86.Build.0 = Release|x86
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Debug|x64.ActiveCfg = Debug|x64
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Debug|x64.Build.0 = Debug|x64
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Debug|x86.ActiveCfg = Debug|x86
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Debug|x86.Build.0 = Debug|x86
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Publish|x64.ActiveCfg = Publish|x64
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Publish|x64.Build.0 = Publish|x64
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Publish|x86.ActiveCfg = Publish|x86
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Publish|x86.Build.0 = Publish|x86
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Release|x64.ActiveCfg = Release|x64
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Release|x64.Build.0 = Release|x64
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Release|x86.ActiveCfg = Release|x86
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{32976608-13C2-395D-F9A8-9038E6AB27B0} = {F6C6F376-4E3B-4338-8A6E-CC0E2627CBA7}
+		{796EC67A-DA95-573F-C5D1-1A691A2FE8A7} = {F6C6F376-4E3B-4338-8A6E-CC0E2627CBA7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40BF085B-8E5B-4402-A4A9-84F4C85863BE}
