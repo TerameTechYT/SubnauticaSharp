@@ -1,0 +1,3 @@
+C:\Coding\SubnauticaSharp\Objects\x64\Debug\Template.csproj.AssemblyReference.cache
+C:\Coding\SubnauticaSharp\Objects\x64\Debug\Template.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding\SubnauticaSharp\Objects\x64\Debug\Template.csproj.CoreCompileInputs.cache

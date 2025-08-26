@@ -1,0 +1,121 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(SolutionDir)Subnautica.VS.User.props" />
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <AnalysisLevel>latest-all</AnalysisLevel>
+        <LangVersion>preview</LangVersion>
+        <ErrorReport>none</ErrorReport>
+
+        <NuGetAuditLevel>low</NuGetAuditLevel>
+        <NuGetAuditMode>all</NuGetAuditMode>
+
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+        <RepositoryType>git</RepositoryType>
+        <PackageProjectUrl>https://github.com/TerameTechYT/SubnauticaSharp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/TerameTechYT/SubnauticaSharp</RepositoryUrl>
+        <PackageLicenseFile>$(SolutionDir)LICENSE.md</PackageLicenseFile>
+        <PackageReadmeFile>$(SolutionDir)README.md</PackageReadmeFile>
+
+        <Configurations>Debug;Release;Publish</Configurations>
+        <PlatformTarget>x64</PlatformTarget>
+        <Platforms>x64;x86</Platforms>
+        <DebugType>embedded</DebugType>
+        <WarningLevel>4</WarningLevel>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <!-- Change this to the path to your Subnautica Directory -->
+		<SubnauticaVersion>Subnautica</SubnauticaVersion>
+        <SubnauticaDirectory>$(SteamLibraryDirectory)\$(SubnauticaVersion)</SubnauticaDirectory>
+
+        <!-- Do Not Change Anything Below -->
+        <SubnauticaDataDirectory>$(SubnauticaDirectory)\$(SubnauticaVersion)_Data</SubnauticaDataDirectory>
+        <SubnauticaManagedDirectory>$(SubnauticaDataDirectory)\Managed</SubnauticaManagedDirectory>
+        <SubnauticaPluginsDirectory>$(SubnauticaDataDirectory)\Plugins</SubnauticaPluginsDirectory>
+        <SubnauticaResourcesDirectory>$(SubnauticaDataDirectory)\Resources</SubnauticaResourcesDirectory>
+        <SubnauticaStreamingAssetsDirectory>$(SubnauticaDataDirectory)\StreamingAssets</SubnauticaStreamingAssetsDirectory>
+
+        <BIEDirectory>$(SubnauticaDirectory)\BepInEx</BIEDirectory>
+        <BIECoreDirectory>$(BIEDirectory)\core</BIECoreDirectory>
+        <BIEPatchersDirectory>$(BIEDirectory)\patchers</BIEPatchersDirectory>
+        <BIEPluginsDirectory>$(BIEDirectory)\plugins</BIEPluginsDirectory>
+
+        <NautilusDirectory>$(BIEPluginsDirectory)\Nautilus</NautilusDirectory>
+    </PropertyGroup>
+
+	<ItemGroup>
+		<CopyItemsAssets Include="$(ProjectDir)\Assets\**\*.*" />
+		<CopyItemsLocalization Include="$(ProjectDir)\Localization\**\*.*" />
+	</ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' != 'Publish'">
+        <RemoveDir Directories="$(BIEPluginsDirectory)\$(ModName)" />
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BIEPluginsDirectory)\$(ModName)" ContinueOnError="false" />
+        <Copy SourceFiles="$(TargetDir)$(ModName).deps.json" DestinationFiles="$(BIEPluginsDirectory)\$(ModName)\$(ModName).deps.json" ContinueOnError="false" />
+        <Copy SourceFiles="@(CopyItemsAssets)" DestinationFolder="$(BIEPluginsDirectory)\$(ModName)\Assets\%(RecursiveDir)" ContinueOnError="true" />
+        <Copy SourceFiles="@(CopyItemsLocalization)" DestinationFolder="$(BIEPluginsDirectory)\$(ModName)\Localization\%(RecursiveDir)" ContinueOnError="true" />
+	</Target>
+
+    <ItemGroup>
+        <!-- Extra File Compilations -->
+        <Compile Include="$(SolutionDir)Source\GlobalSuppressions.cs" />
+
+        <Compile Remove="bin\**" />
+        <Compile Remove="obj\**" />
+        <EmbeddedResource Remove="bin\**" />
+        <EmbeddedResource Remove="obj\**" />
+        <None Remove="bin\**" />
+        <None Remove="obj\**" />
+
+        <!-- README -->
+        <None Update="README.md">
+            <Pack>True</Pack>
+            <PackagePath>$(SolutionDir)</PackagePath>
+        </None>
+
+        <!-- System -->
+        <Using Include="JetBrains.Annotations" />
+
+        <Using Include="System" />
+        
+        <Using Include="System.Linq" />
+
+        <Using Include="System.Text" />
+        <Using Include="System.Xml" />
+        <Using Include="System.Xml.Linq" />
+        <Using Include="System.Xml.Serialization" />
+        
+        <Using Include="System.Reflection" />
+        <Using Include="System.Reflection.Emit" />
+        
+        <Using Include="System.Collections" />
+        <Using Include="System.Collections.Generic" />
+
+        <Using Include="System.Runtime" />
+        <Using Include="System.Runtime.CompilerServices" />
+        
+        <Using Include="System.Diagnostics" />
+        <Using Include="System.Diagnostics.CodeAnalysis" />
+        
+        <!-- UnityEngine -->
+        <Using Include="UnityEngine" />
+        <Using Include="UnityEngine.Rendering" />
+        <Using Include="UnityEngine.SceneManagement" />
+
+        <!-- Harmony -->
+        <Using Include="HarmonyLib" />
+        <Using Include="HarmonyLib.Tools" />
+
+        <!-- BepInEx -->
+        <Using Include="BepInEx" />
+        <Using Include="BepInEx.Bootstrap" />
+        <Using Include="BepInEx.Configuration" />
+        <Using Include="BepInEx.Logging" />
+        <Using Include="BepInEx.Harmony" />
+        <Using Include="BepInEx.Preloader" />
+        <Using Include="BepInEx.Preloader.Patching" />
+    </ItemGroup>
+</Project>
