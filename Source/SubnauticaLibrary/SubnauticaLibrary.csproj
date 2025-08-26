@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <ModName>SubnauticaLibrary</ModName>
+        <AssemblyName>$(ModName)</AssemblyName>
+        <RootNamespace>$(ModName)</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+      <Folder Include="Assets\" />
+    </ItemGroup>
+
+    <!-- Import Subnautica VS properties - paths etc. -->
+    <Import Project="$(SolutionDir)Subnautica.VS.props" />
+
+    <!-- Import Game/Unity DLL references -->
+    <Import Project="$(SolutionDir)Subnautica.VS.References.props" />
+</Project>
